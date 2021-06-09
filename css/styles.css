@@ -1,0 +1,39 @@
+body {
+    background-color: #C8ECC0;
+}
+
+#logo {
+    min-width: 50px;
+}
+
+#header-text-xs {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 46px;
+    font-weight: bold;  
+}
+
+#header-text-sm {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    font-weight: bold;  
+}
+
+#header-text-md {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px;
+    font-weight: bold;  
+}
+
+hr {
+    border-color: black;
+}
+
+h2 {
+    font-size: 22px;
+
+}
+
+.carousel-inner{
+    width:100%;
+    max-height: 270px !important;
+  }
