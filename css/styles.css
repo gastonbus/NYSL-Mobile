@@ -37,3 +37,27 @@ h2 {
     width:100%;
     max-height: 270px !important;
   }
+
+.latest-news {
+background-color: #C9E265;
+}
+
+@media all and (orientation: landscape) {
+    body {
+        background-color: white;
+    }
+
+    #carouselExampleSlidesOnly {
+        display: block !important;
+    }
+
+    .main-table-fullwidth {
+        display: none;
+    }
+}
+
+@media all and (orientation: portrait) {
+    .latest-news .main-table-reducedwidth {
+        display: none;
+    }
+}
