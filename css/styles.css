@@ -38,8 +38,9 @@ h2 {
     max-height: 270px !important;
   }
 
-.latest-news {
-background-color: #C9E265;
+.latest-news, .list-group-item {
+    background-color: #C9E265;
+    border: none;
 }
 
 @media all and (orientation: landscape) {
@@ -50,14 +51,14 @@ background-color: #C9E265;
     #carouselExampleSlidesOnly {
         display: block !important;
     }
+}
 
-    .main-table-fullwidth {
+@media all and (orientation: portrait) {
+    .latest-news {
         display: none;
     }
 }
 
-@media all and (orientation: portrait) {
-    .latest-news .main-table-reducedwidth {
-        display: none;
-    }
+#teams, #locations, #times {
+    display: none;
 }
