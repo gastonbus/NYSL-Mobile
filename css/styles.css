@@ -43,22 +43,29 @@ h2 {
     border: none;
 }
 
-@media all and (orientation: landscape) {
-    body {
-        background-color: white;
-    }
-
-    #carouselExampleSlidesOnly {
-        display: block !important;
-    }
-}
-
-@media all and (orientation: portrait) {
-    .latest-news {
-        display: none;
-    }
-}
-
-#teams, #locations, #times {
+#teams, #locations, #times, #chat {
     display: none;
 }
+
+.list-group {
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.message-data {
+    font-size: 12px;
+}
+
+.message-text {
+    font-size: 14px;
+}
+
+.message-box {
+    border-radius: 0px 20px 20px 0px;
+}
+
+.avatar-box {
+    border-radius: 20px 0px 0px 20px;
+}
+
