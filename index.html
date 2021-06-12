@@ -965,6 +965,8 @@
                                     <button id="signUp-btn" class="btn btn-info" v-on:click="createUser">Sign Up</button>
                                     <button id="signIn-btn" class="btn btn-success" v-on:click="userSignIn">Sign In</button>
                                     <p class="text-info mt-2">If you're just registered, press directly the Sign In button. If not, press the Sign Up button.</p>
+                                    <p>If you prefer, you can use a Google Account:</p>
+                                    <button id="googleSignIn-btn" class="btn btn-" v-on:click="googleSignIn"><img src="https://www.oncrashreboot.com/images/create-apple-google-signin-buttons-quick-dirty-way-google.png" id="googleSignIn-img"></button>
                                 </div>
                             </div>
                         </template>
@@ -973,7 +975,7 @@
                                 <div class="col text-center mt-3 mb-2">
                                     <p>You're signed in as "{{currentUser}}"</p>
                                     <button id="signOut-btn" class="btn btn-danger" v-on:click="userSignOut">Sign Out</button>
-                                    <p>The following messages are related to the game scheduled for <b>{{gameDate}}</b> at <b>{{gameKickOffTime}}</b> between <b>{{team1}}</b> and <b>{{team2}}</b></p>{{gameId}} (only for testing purposes)
+                                    <p>The following messages are related to the game scheduled for <b>{{gameDate}}</b> at <b>{{gameKickOffTime}}</b> between <b>{{team1}}</b> and <b>{{team2}}</b></p>
                                 </div>
                             </div>
                         </template>
@@ -1000,7 +1002,7 @@
                                         {{message.messageHour}})</p>
                                 </div>
                             </div>
-                            <div class="col bg-primary text-wrap text-left message-text message-box">{{message.text}}  <p style="font-size: 12px;">gameId (only for testing purposes): {{message.gameId}}</p></div>
+                            <div class="col bg-primary text-wrap text-left message-text message-box">{{message.text}}</div>
                         </div>
                     </div>
                 </template>

@@ -46,7 +46,6 @@ var app = new Vue({
                 gameId: app.gameId,
                 messageMiliseconds: Date.now(),
             });
-            app.readMessages(app.gameId);
         },
         readMessages: function(gameIdRequested) {
             app.messages = [];
@@ -75,13 +74,19 @@ var app = new Vue({
         userSignIn: function() {
             firebase.auth().signInWithEmailAndPassword(app.user, app.password)
             .then(function(){
-                app.currentUser = firebase.auth().currentUser.email;
                 app.updatePage('chat');
             })
             .catch(function(error){
                 var errorMessage = error.message;
                 alert(errorMessage);
             });
+        },
+        setAuth: function() {
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    app.currentUser = firebase.auth().currentUser.email;
+                }
+              });
         },
         userSignOut: function() {
             firebase.auth().signOut()
@@ -94,8 +99,17 @@ var app = new Vue({
             app.gameId = gameIdRequested;
             app.readMessages(gameIdRequested);
         },
+        googleSignIn: function() {
+            var provider = new firebase.auth.GoogleAuthProvider();
+            provider.addScope('profile');
+            provider.addScope('email');
+            firebase.auth().signInWithPopup(provider).then(function(result) {
+            var token = result.credential.accessToken;
+            var user = result.user;
+            });
+        },
     },
 });
 
 app.firebaseInit();
-console.log(firebase.auth().currentUser);
+app.setAuth();
